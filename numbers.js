@@ -8,73 +8,73 @@ let attemptsDisplay = document.getElementById("subnetting__notications--attempts
 let scoreDisplay = document.getElementById("subnetting__notications--score");
 let streakDisplay = document.getElementById("subnetting__notications--streak");
 
-let services = [
+let quiz = [
     // STP --------------
     {
-        name: "STP cost: 10MB connection",
-        port: "100"
+        question: "STP cost: 10MB connection",
+        answer: "100"
     },
     {
-        name: "STP cost: 100MB connection",
-        port: "19"
+        question: "STP cost: 100MB connection",
+        answer: "19"
     },
     {
-        name: "STP cost: 1GB connection",
-        port: "4"
+        question: "STP cost: 1GB connection",
+        answer: "4"
     },
     {
-        name: "STP cost: 10GB connection",
-        port: "2"
+        question: "STP cost: 10GB connection",
+        answer: "2"
     },
     // OSPF -------------
     // {
-    //     name: "OSPF cost: 64kbs connection",
-    //     port: "1562"
+    //     question: "OSPF cost: 64kbs connection",
+    //     answer: "1562"
     // },
     // {
-    //     name: "OSPF cost: 128kbs connection",
-    //     port: "781"
+    //     question: "OSPF cost: 128kbs connection",
+    //     answer: "781"
     // },
     {
-        name: "OSPF cost: T1 connection",
-        port: "64"
+        question: "OSPF cost: T1 connection",
+        answer: "64"
     },
     {
-        name: "OSPF cost: 100MB connection",
-        port: "10"
+        question: "OSPF cost: 100MB connection",
+        answer: "10"
     },
     {
-        name: "OSPF cost: 1GB connection",
-        port: "1"
+        question: "OSPF cost: 1GB connection",
+        answer: "1"
     },
     {
-        name: "OSPF cost: 10GB connection",
-        port: "1"
+        question: "OSPF cost: 10GB connection",
+        answer: "1"
     },
     // Dynamic routing admin disctance
     {
-        name: "Admin distance: Directly connected",
-        port: "0"
+        question: "Admin distance: Directly connected",
+        answer: "0"
     },
     {
-        name: "Admin distance: Static route",
-        port: "1"
+        question: "Admin distance: Static route",
+        answer: "1"
     },
     {
-        name: "Admin distance: External BGP",
-        port: "20"
+        question: "Admin distance: External BGP",
+        answer: "20"
     },
     {
-        name: "Admin distance: Internal EIBGP",
-        port: "90"
+        question: "Admin distance: Internal EIBGP",
+        answer: "90"
     },
     {
-        name: "Admin distance: OSPF",
-        port: "110"
+        question: "Admin distance: OSPF",
+        answer: "110"
     },
     {
-        name: "Admin distance: RIP",
-        port: "120"
+        question: "Admin distance: RIP",
+        answer: "120"
     },
     
 ]
@@ -86,15 +86,15 @@ let streak = 0;
 
 
 function generateAssignment(){
-    assignment = Math.floor(Math.random()*services.length);
-    assignmentText.innerText = services[assignment].name;
-    assingmentHint.innerText = services[assignment].port;
+    assignment = Math.floor(Math.random()*quiz.length);
+    assignmentText.innerText = quiz[assignment].question;
+    assingmentHint.innerText = quiz[assignment].answer;
 
 }
 
 function gradeAnswer(){
     userInputReading = userInput.value;
-    if (userInputReading == services[assignment].port){
+    if (userInputReading == quiz[assignment].answer){
         attempts++;
         score++;
         streak++;
