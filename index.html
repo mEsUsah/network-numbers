@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Numbers</title>
+    <style>
+        body{
+            background-color: gray; 
+            color: white;
+        }
+        #subnetting__input{
+            background-color: rgb(223, 223, 223);
+            transition: all 0.2s;
+        }
+
+        #subnetting__input.correct {
+            background-color: rgb(81, 190, 81);
+        }
+
+        #subnetting__input.error {
+            animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+            background-color: rgb(184, 121, 121);
+          }
+          
+        @keyframes shake {
+            10%, 90% {
+                transform: translate3d(-1px, 0, 0);
+            }
+            
+            20%, 80% {
+                transform: translate3d(2px, 0, 0);
+            }
+            
+            30%, 50%, 70% {
+                transform: translate3d(-4px, 0, 0);
+            }
+            
+            40%, 60% {
+                transform: translate3d(4px, 0, 0);
+            }
+        }
+
+        #subnetting__notications{
+            color: white; 
+            background-color: rgb(73, 73, 167); 
+            display:inline-block; 
+            padding: 10px; 
+            margin-top: 20px; 
+            border-radius: 4px;
+        }
+        #subnetting__address{
+            background-color: #3c3f50; 
+            padding: 10px; 
+            width: fit-content; 
+            border-radius: 4px;
+        }
+        #subnetting__hint{
+            background-color: #a84141; 
+            padding: 10px; 
+            width: fit-content; 
+            border-radius: 4px;
+            opacity: 0;
+            transition: all 0.2s;
+        }
+        #subnetting__hint.active{
+            opacity: 1;
+        }
+        #credits{
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+        }
+        #credits a{
+            color: rgb(118 221 85);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Network numbers</h1>
+    <p>A memorization tool for networking students</p>
+    <p>Type in the correct number</p>
+    <p>Administrative distance, OSPF cost and STP cost</p>
+    <hr>
+    <div>
+        <div style="display:inline-block">
+            <pre id="subnetting__address"></pre> 
+        </div>
+        <div style="display:inline-block">
+            <pre id="subnetting__hint">hello</pre>
+        </div>
+    </div>
+
+    </div>
+    <input type="text" name="" id="subnetting__input">
+    <button id="subnetting__checkbutton">Check!</button>
+    <br>
+    <div id="subnetting__notications">
+        <span id="subnetting__notications--score">0</span> / <span id="subnetting__notications--attempts">0</span>
+    </div>
+    <div id="subnetting__notications">
+        Streak: <span id="subnetting__notications--streak">0</span>
+    </div>
+
+    <p id="credits">Written by Stanley Skarshaug - <a href="https://www.haxor.no">HAXOR.no</a></p>
+
+    <script src="numbers.js"></script>
+</body>
+</html>
