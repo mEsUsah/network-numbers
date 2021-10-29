@@ -11,44 +11,44 @@ let streakDisplay = document.getElementById("subnetting__notications--streak");
 let quiz = [
     // STP --------------
     {
-        question: "STP cost: 10MB connection",
+        question: "STP cost: 10Mbit connection",
         answer: "100"
     },
     {
-        question: "STP cost: 100MB connection",
+        question: "STP cost: 100Mbit connection",
         answer: "19"
     },
     {
-        question: "STP cost: 1GB connection",
+        question: "STP cost: 1Gbit connection",
         answer: "4"
     },
     {
-        question: "STP cost: 10GB connection",
+        question: "STP cost: 10Gbit connection",
         answer: "2"
     },
     // OSPF -------------
     // {
-    //     question: "OSPF cost: 64kbs connection",
+    //     question: "OSPF cost: 64kbit connection",
     //     answer: "1562"
     // },
     // {
-    //     question: "OSPF cost: 128kbs connection",
+    //     question: "OSPF cost: 128kbit connection",
     //     answer: "781"
     // },
     {
-        question: "OSPF cost: T1 connection",
+        question: "OSPF cost: T1 connection (1.5Mbit)",
         answer: "64"
     },
     {
-        question: "OSPF cost: 100MB connection",
+        question: "OSPF cost: 100Mbit connection",
         answer: "10"
     },
     {
-        question: "OSPF cost: 1GB connection",
+        question: "OSPF cost: 1Gbit connection",
         answer: "1"
     },
     {
-        question: "OSPF cost: 10GB connection",
+        question: "OSPF cost: 10Gbit connection",
         answer: "1"
     },
     // Dynamic routing admin disctance
