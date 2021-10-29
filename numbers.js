@@ -40,8 +40,12 @@ let quiz = [
         answer: "64"
     },
     {
-        question: "OSPF cost: 100Mbit connection",
+        question: "OSPF cost: 10Mbit connection",
         answer: "10"
+    },
+    {
+        question: "OSPF cost: 100Mbit connection",
+        answer: "1"
     },
     {
         question: "OSPF cost: 1Gbit connection",
